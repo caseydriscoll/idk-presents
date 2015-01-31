@@ -8,6 +8,8 @@
  *
  */
 
+include 'idk-presents-cpt.php';
+
 class IDK_Presents {
 
 
