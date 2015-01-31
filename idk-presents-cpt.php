@@ -6,12 +6,18 @@ class IDK_Presents_CPT {
 
 	function __construct() {
 
-		add_action( 'init', array( $this, 'register' ) );
+		add_action( 'init',
+			array( $this, 'register' ) );
 
-		add_action( 'admin_head', array( $this, 'add_menu_icons_styles' ) );
+		add_action( 'admin_head',
+			array( $this, 'add_menu_icons_styles' ) );
+
+		add_action( 'get_header',
+			array( $this, 'remove_sidebar' ) );
+
 	}
 
-	
+
 	/**
 	 * Registers the 'Presents' Custom Post Type
 	 *
@@ -73,6 +79,24 @@ class IDK_Presents_CPT {
 
 	<?php
 	}
+
+
+	/**
+	 * Removes sidebar on 'Presentation' custom post types
+	 *
+	 * @author caseypatrickdriscoll
+	 *
+	 * @created 2015-01-31 18:18:38
+	 *
+	 * @return void
+	 */
+	function remove_sidebar() {
+		$post = $GLOBALS['post'];
+
+		if ( $post->post_type == 'presentation' )
+			add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
+	}
+
 }
 
 new IDK_Presents_CPT();
