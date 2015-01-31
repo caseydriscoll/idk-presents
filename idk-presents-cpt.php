@@ -33,11 +33,11 @@ class IDK_Presents_CPT {
 			'public'            => true,
 			'show_in_nav_menus' => true,
 			'show_ui'           => true,
-			'menu_icon'         => '',
-			'supports'          => array( 'title', 'editor' ),
 			'has_archive'       => true,
 			'query_var'         => true,
 			'rewrite'           => true,
+			'menu_icon'         => '',
+			'supports'          => array( 'title', 'editor', 'thumbnail', 'comments' ),
 			'labels'            => array(
 				'name'                => __( 'Presentations', 'YOUR-TEXTDOMAIN' ),
 				'singular_name'       => __( 'Presentation', 'YOUR-TEXTDOMAIN' ),
@@ -54,6 +54,7 @@ class IDK_Presents_CPT {
 				'menu_name'           => __( 'Presentations', 'YOUR-TEXTDOMAIN' ),
 			),
 		) );
+
 	}
 
 
