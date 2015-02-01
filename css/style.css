@@ -14,6 +14,9 @@ section.slide {
     min-height: 800px;
     padding: 100px; margin: 100px auto;
     background: #ffffff;
+
+    background-size: cover;
+    background-position: center center;
 }
 
 section note { display: block; margin: 10px 0; }

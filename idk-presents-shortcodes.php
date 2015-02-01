@@ -21,7 +21,17 @@ class IDK_Presents_Shortcodes {
 
 
 	function slide( $atts ) {
-		return "</section><section class='slide'>";
+
+		if ( is_array( $atts ) ) extract( $atts );
+
+		if ( isset( $bg ) ) {
+			$query = new WP_Query( 'pagename=' . $bg );
+			$bg = wp_get_attachment_url( $query->post->ID );
+		}
+
+
+
+		return "</section><section class='slide' style='background-image:url($bg)'>";
 	}
 
 
