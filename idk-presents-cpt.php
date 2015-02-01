@@ -9,9 +9,6 @@ class IDK_Presents_CPT {
 		add_action( 'init',
 			array( $this, 'register' ) );
 
-		add_action( 'admin_head',
-			array( $this, 'add_menu_icons_styles' ) );
-
 		add_action( 'get_header',
 			array( $this, 'remove_sidebar' ) );
 
@@ -24,6 +21,7 @@ class IDK_Presents_CPT {
 	 * @author caseypatrickdriscoll
 	 *
 	 * @created 2015-01-31 17:48:19
+	 * @edited  2015-01-31 23:42:26 - Change menu position
 	 *
 	 * @return void
 	 */
@@ -36,7 +34,8 @@ class IDK_Presents_CPT {
 			'has_archive'       => true,
 			'query_var'         => true,
 			'rewrite'           => array( 'slug' => 'presents' ),
-			'menu_icon'         => '',
+			'menu_position'     => 2,
+			'menu_icon'         => 'dashicons-images-alt2',
 			'supports'          => array( 'title', 'editor', 'thumbnail', 'comments' ),
 			'labels'            => array(
 				'name'                => __( 'Presentations', 'YOUR-TEXTDOMAIN' ),
@@ -57,29 +56,6 @@ class IDK_Presents_CPT {
 
 	}
 
-
-	/**
-	 * Adds icon to admin menu for 'Presentations' custom post type
-	 *
-	 * Thanks to http://mannieschumpert.com/blog/using-wordpress-3-8-icons-custom-post-types-admin-menu/
-	 *
-	 * @author caseypatrickdriscoll
-	 *
-	 * @created 2015-01-31 17:55:51
-	 *
-	 * @return void
-	 */
-	function add_menu_icons_styles(){
-		?>
-
-		<style>
-			#adminmenu .menu-icon-presentation div.wp-menu-image:before {
-				content: '\f233';
-			}
-		</style>
-
-	<?php
-	}
 
 
 	/**
