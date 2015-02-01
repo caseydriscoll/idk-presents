@@ -17,6 +17,10 @@ class IDK_Presents_Shortcodes {
 		add_action( 'wp_enqueue_scripts',
 			array( $this, 'scripts_and_styles' ) );
 
+		add_action( 'wp_footer', function() {
+			echo '<div id="idk-overlay"></div>';
+		} );
+
 	}
 
 

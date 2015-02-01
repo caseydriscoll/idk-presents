@@ -1,12 +1,19 @@
 jQuery( document ).ready( function() {
     jQuery( '#idk-play' ).on( 'click', function() {
 
-        jQuery( this ).toggleClass( 'playing' );
+        jQuery( '#idk-play, body' ).toggleClass( 'playing' );
         jQuery( 'note' ).toggle();
 
-        if ( jQuery( '#idk-play' ).hasClass( 'playing' ) )
+        jQuery( '#idk-overlay' ).toggle();
+
+        if ( jQuery( '#idk-play' ).hasClass( 'playing' ) ) {
+
+            slides = jQuery( '.slide' ).clone();
+
+            jQuery( '#idk-overlay' ).html( slides );
+
             jQuery( this ).html( 'Stop' );
-        else
+        } else
             jQuery( this ).html( 'Start' );
 
     } );
