@@ -9,8 +9,8 @@ class IDK_Presents_CPT {
 		add_action( 'init',
 			array( $this, 'register' ) );
 
-//		add_action( 'get_header',
-//			array( $this, 'remove_sidebar' ) );
+		add_action( 'get_header',
+			array( $this, 'remove_sidebar' ) );
 
 	}
 
