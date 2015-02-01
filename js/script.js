@@ -4,7 +4,7 @@ jQuery( document ).ready( function() {
         jQuery( '#idk-play, body' ).toggleClass( 'playing' );
         jQuery( 'note' ).toggle();
 
-        jQuery( '#idk-overlay' ).toggle();
+        jQuery( '#idk-overlay' ).html( '' ).toggle();
 
         if ( jQuery( '#idk-play' ).hasClass( 'playing' ) ) {
 

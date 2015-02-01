@@ -29,13 +29,19 @@ class IDK_Presents_Shortcodes {
 		if ( is_array( $atts ) ) extract( $atts );
 
 		if ( isset( $bg ) ) {
-			$query = new WP_Query( 'pagename=' . $bg );
-			$bg = wp_get_attachment_url( $query->post->ID );
+			$args = array(
+								'name'        => $bg,
+								'post_status' => 'any',
+								'post_type'   => 'attachment'
+							);
+
+			$query = new WP_Query( $args );
+			$bg_img = wp_get_attachment_url( $query->post->ID );
 		}
 
+		if ( isset( $bg_img ) ) $style = "background-image:url($bg_img)";
 
-
-		return "</section><section class='slide' style='background-image:url($bg)'>";
+		return "</section><section class='slide' style='$style'>";
 	}
 
 

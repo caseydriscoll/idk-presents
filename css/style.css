@@ -22,7 +22,7 @@ body{
     background-color: #ffffff;
     }
     #idk-overlay section.slide {
-        height: 100%;
+        min-height: 100%; height: auto;
         padding: 100px; margin: 0px auto;
         background: #ffffff;
 
@@ -50,8 +50,8 @@ body{
         .playing #idk-play:hover { opacity: 1; }
 
 section.slide {
-    min-height: 800px;
-    padding: 100px; margin: 100px auto;
+    min-height: 300px;
+    padding: 100px 50px; margin: 100px auto;
     background: #ffffff;
 
     background-size: cover;
