@@ -46,7 +46,7 @@ class IDK_Presents_Shortcodes {
 
 
 	function note( $atts, $content ) {
-		return "<note>" . $content . "</note>";
+		return "<span class="note">" . $content . "</span>";
 	}
 
 

@@ -29,7 +29,7 @@ body{
         background-size: cover;
         background-position: center center;
     }
-    #idk-overlay section.slide note {
+    #idk-overlay section.slide .note {
         display: none;
     }
 
@@ -61,7 +61,7 @@ section.slide {
     background-position: center center;
 }
 
-section note { display: block; margin: 10px 0; }
+section .note { display: block; margin: 10px 0; }
 
 section.slide h2 { font-size: 72px; margin-bottom: 50px; border-bottom: 3px solid #000000; }
 section.slide h3 { font-size: 48px; margin-top: 40px; }
