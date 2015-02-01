@@ -35,7 +35,7 @@ class IDK_Presents_CPT {
 			'show_ui'           => true,
 			'has_archive'       => true,
 			'query_var'         => true,
-			'rewrite'           => true,
+			'rewrite'           => array( 'slug' => 'presents' ),
 			'menu_icon'         => '',
 			'supports'          => array( 'title', 'editor', 'thumbnail', 'comments' ),
 			'labels'            => array(
