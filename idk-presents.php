@@ -8,6 +8,7 @@
  */
 
 include 'idk-presents-cpt.php';
+include 'idk-presents-shortcodes.php';
 
 class IDK_Presents {
 
