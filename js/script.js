@@ -2,7 +2,7 @@ jQuery( document ).ready( function() {
     jQuery( '#idk-play' ).on( 'click', function() {
 
         jQuery( '#idk-play, body' ).toggleClass( 'playing' );
-        jQuery( 'note' ).toggle();
+//        jQuery( 'note' ).toggle();
 
         jQuery( '#idk-overlay' ).html( '' ).toggle();
 

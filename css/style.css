@@ -29,6 +29,9 @@ body{
         background-size: cover;
         background-position: center center;
     }
+    #idk-overlay section.slide note {
+        display: none;
+    }
 
 #idk-play {
     display: block; position: fixed; z-index: 11;
