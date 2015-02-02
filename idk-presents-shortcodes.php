@@ -39,7 +39,7 @@ class IDK_Presents_Shortcodes {
 			$bg_img = wp_get_attachment_url( $query->post->ID );
 		}
 
-		if ( isset( $bg_img ) ) $style = "background-image:url($bg_img)";
+		if ( isset( $bg_img ) ) $style = "background-image:url($bg_img);padding:300px 50px;";
 
 		return "</section><section class='slide' style='$style'>";
 	}
