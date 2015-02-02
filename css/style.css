@@ -9,6 +9,9 @@ body{
     body.playing {
         /*overflow:hidden;*/
     }
+    body.playing .site-inner {
+        display: none;
+    }
 
 
 
