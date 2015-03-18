@@ -43,7 +43,7 @@ class IDK_Presents_Shortcodes {
 
 		if ( isset( $bg_img ) ) $style .= "background-image:url($bg_img);padding:300px 50px;";
 
-		return "</section><section class='slide' style='$style'>";
+		return "<br style="clear:both;" /></section><section class='slide' style='$style'>";
 	}
 
 
